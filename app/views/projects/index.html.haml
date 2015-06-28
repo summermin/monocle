@@ -1,0 +1,6 @@
+%h1 My Projects
+%div= link_to "+ New project", new_user_project_path(current_user)
+- @projects.each do |project|
+  %h2= project.name
+  %p= project.description
+  %hr/

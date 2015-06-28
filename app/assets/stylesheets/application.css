@@ -30,4 +30,12 @@ h1, h2, h3 {
 
 #body-content {
   padding: 20px;
+  background-color: #efefef;
+  min-height: 700px;
+}
+
+#footer-nav {
+  padding: 20px;
+  background-color: #222;
+  min-height: 150px;
 }

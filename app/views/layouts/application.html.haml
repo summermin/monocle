@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Monocle
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %script{:src => "//use.typekit.net/abm7tvh.js"}
+    :javascript
+      try{Typekit.load();}catch(e){}
+  %body
+    #top-nav
+      .logo
+        = image_tag "monocle-logo-white.png"
+    #body-content
+      = yield
+    #footer-nav
