@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title Monocle
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %script{:src => "//use.typekit.net/abm7tvh.js"}
+    :javascript
+      try{Typekit.load();}catch(e){}
+  %body
+    #top-nav
+      .left-nav
+        .logo
+          = image_tag "monocle-logo-white.png"
+      .right-nav
+        = render partial: 'layouts/right_nav'
+      .clearfix
+    #body-content
+      = yield
+    #footer-nav
+      © monocle 2015
