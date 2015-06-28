@@ -1,7 +1,6 @@
-<h1>Welcome to Monocle!</h1>
-
 <% if current_user %>
-<div>Welcome, <%= link_to current_user.first_name, users_profile_path %>! </div>
+<div>Welcome, <%= current_user.first_name %>!</div>
+<div><%= link_to 'Check out your projects', projects_path %></div>
 <div><%= link_to "Create a new project", new_user_project_path(current_user) %></div>
 <% else %>
 <div>Sign in <%= link_to "here!", new_user_session_path %></div>
