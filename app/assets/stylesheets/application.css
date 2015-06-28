@@ -13,29 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-body {
-  margin: 0px;
-  font-family: proxima-nova, sans-serif;
-}
-
-h1, h2, h3 {
-  font-family: clavo, sans-serif;
-}
-
-#top-nav {
-  padding: 20px;
-  background-color: #333;
-}
-
-#body-content {
-  padding: 20px;
-  background-color: #efefef;
-  min-height: 700px;
-}
-
-#footer-nav {
-  padding: 20px;
-  background-color: #222;
-  min-height: 150px;
-}
