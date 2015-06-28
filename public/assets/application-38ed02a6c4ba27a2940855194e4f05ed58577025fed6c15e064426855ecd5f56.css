@@ -10,24 +10,15 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
 
+
 body {
-  margin: 0px;
   font-family: proxima-nova, sans-serif;
 }
 
 h1, h2, h3 {
   font-family: clavo, sans-serif;
-}
-
-#top-nav {
-  padding: 20px;
-  background-color: #333;
-}
-
-#body-content {
-  padding: 20px;
 }

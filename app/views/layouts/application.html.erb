@@ -11,7 +11,15 @@
 </head>
 <body>
 
-<%= yield %>
+<div id="top-nav">
+  <div class="logo">
+    <%= image_tag "monocle-logo-white.png" %>
+  </div>
+</div>
+
+<div id="body-content">
+  <%= yield %>
+</div>
 
 </body>
 </html>
