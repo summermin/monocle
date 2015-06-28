@@ -1,35 +1,39 @@
+$header-font-face: clavo, sans-serif;
+$body-font-face: proxima-nova, sans-serif;
+
 body {
   margin: 0px;
-  font-family: proxima-nova, sans-serif;
+  font-family: $body-font-face;
 }
 
 h1, h2, h3 {
-  font-family: clavo, sans-serif;
+  font-family: $header-font-face;
+  margin-top: 0px;
 }
 
 .clearfix { clear: both; }
 
-a:link {
+a {
   color: #fff;
   text-decoration: none;
 }
 
-/* visited link */
-a:visited {
+.btn {
   color: #fff;
-  text-decoration: none;
-}
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12pt;
+  border: 1px solid #666;
 
-/* mouse over link */
-a:hover {
-  color: #fff;
-  text-decoration: none;
-}
+  &.grey {
+    background-color: #666;
+  }
 
-/* selected link */
-a:active {
-  color: #fff;
-  text-decoration: none;
+  &.green {
+    background-color: #60b044;
+    border: 1px solid #5ca941;
+  }
 }
 
 #top-nav {
@@ -40,26 +44,15 @@ a:active {
 
   .right-nav {
     float: right;
-    color: #fff;
 
     .sign-in, .sign-out {
       float: left;
-      background-color: #666;
-      border-color: #5ca941;
-      padding: 10px 20px;
       margin: 0px 5px;
-      border-radius: 3px;
-      cursor: pointer;
     }
 
     .sign-up {
       float: left;
-      padding: 10px 20px;
       margin: 0px 5px;
-      background-color: #60b044;
-      border-color: #5ca941;
-      border-radius: 3px;
-      cursor: pointer;
     }
   }
 }
@@ -67,7 +60,56 @@ a:active {
 #body-content {
   padding: 20px;
   background-color: #efefef;
-  min-height: 700px;
+  min-height: 400px;
+
+  a {
+    color: #4078C0;
+    text-decoration: none;
+  }
+
+  .middle-box {
+    margin: 25px auto;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 400px;
+
+    .box-header {
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+      font-family: $header-font-face;
+      font-size: 16pt;
+    }
+
+    .box-body {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      font-size: 14pt;
+
+      em { font-size: 10pt; }
+
+      #error_explanation {
+        background-color: #FCDEDE;
+        padding: 10px 5px;
+        margin-bottom: 10px;
+        border: 1px solid #D2B2B2;
+        border-radius: 3px;
+
+        h2 { display: none; }
+        ul { margin: 0px; }
+      }
+
+      .field { margin-bottom: 10px; }
+
+      .field input {
+        margin: 5px 0px;
+        width: 340px;
+        padding: 5px;
+        font-size: 16pt;
+      }
+    }
+  }
 }
 
 #footer-nav {
