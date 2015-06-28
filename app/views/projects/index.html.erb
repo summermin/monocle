@@ -1,0 +1,9 @@
+<h1>My Projects</h1>
+
+<div><%= link_to "+ New project", new_user_project_path(current_user) %></div>
+
+<% @projects.each do |project| %>
+  <h2><%= project.name %></h1>
+  <p><%= project.description %></p>
+  <hr>
+<% end %>
