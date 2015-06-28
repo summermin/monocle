@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: proxima-nova, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: clavo, sans-serif;
+}
