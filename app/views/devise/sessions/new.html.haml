@@ -1,0 +1,17 @@
+.middle-box
+  .box-header
+    Sign in
+  .box-body
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = devise_error_messages!
+      .field
+        = f.label :email
+        .clearfix
+        = f.email_field :email, autofocus: true
+      .field
+        = f.label :password
+        = link_to "(forgot password)", new_password_path(resource_name), class: 'forgot-password-link'
+        .clearfix
+        = f.password_field :password, autocomplete: "off"
+      .actions
+        = f.submit "Sign in", class: 'btn grey'
