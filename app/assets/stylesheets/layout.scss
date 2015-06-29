@@ -28,11 +28,35 @@ a {
 
   &.grey {
     background-color: #666;
+    @-webkit-keyframes greyPulse {
+      from { background-color: #666; }
+      50% { background-color: #888; }
+      to { background-color: #666; }
+    }
+    &:hover {
+      background-color: #777;
+      -webkit-animation-name: greyPulse;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+    }
   }
 
   &.green {
     background-color: #60b044;
     border: 1px solid #5ca941;
+
+    @-webkit-keyframes greenPulse {
+      from { background-color: #60b044; }
+      50% { background-color: #69C349; }
+      to { background-color: #60b044; }
+    }
+
+    &:hover {
+      background-color: #69C349;
+      -webkit-animation-name: greenPulse;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+    }
   }
 }
 
