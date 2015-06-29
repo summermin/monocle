@@ -3,6 +3,11 @@
   = f.text_field :name
   = f.label :description
   = f.text_field :description
+  = f.label "what kind of project is this?"
+  = f.label :project_type, "one time"
+  = f.radio_button :project_type, "o"
+  = f.label :project_type, "recurring"
+  = f.radio_button :project_type, "r"
   = f.label :start_date
   = f.date_field :start_date
   = f.label :target_end_date
