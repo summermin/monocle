@@ -25,7 +25,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :description, :start_date, :end_date, :user_id, :project_type)
+    params.require(:project).permit(:name, :description, :start_date, :end_date, :user_id, :project_type, :has_check_ins)
   end
 
   def load_current_user

@@ -1,0 +1,196 @@
+/* line 4, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+body {
+  margin: 0px;
+  font-family: proxima-nova, sans-serif;
+}
+
+/* line 9, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+h1, h2, h3 {
+  font-family: clavo, sans-serif;
+  margin-top: 0px;
+}
+
+/* line 14, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+.clearfix {
+  clear: both;
+}
+
+/* line 16, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 21, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+.btn {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12pt;
+  border: 1px solid #666;
+}
+/* line 29, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+.btn.grey {
+  background-color: #666;
+}
+@-webkit-keyframes greyPulse {
+  from {
+    background-color: #666;
+  }
+  50% {
+    background-color: #888;
+  }
+  to {
+    background-color: #666;
+  }
+}
+/* line 36, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+.btn.grey:hover {
+  background-color: #777;
+  -webkit-animation-name: greyPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+/* line 44, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+.btn.green {
+  background-color: #60b044;
+  border: 1px solid #5ca941;
+}
+@-webkit-keyframes greenPulse {
+  from {
+    background-color: #60b044;
+  }
+  50% {
+    background-color: #69C349;
+  }
+  to {
+    background-color: #60b044;
+  }
+}
+/* line 54, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+.btn.green:hover {
+  background-color: #69C349;
+  -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+/* line 63, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav {
+  padding: 20px;
+  background-color: #333;
+}
+/* line 67, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav .left-nav {
+  float: left;
+}
+/* line 69, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav .right-nav {
+  float: right;
+}
+/* line 72, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav .right-nav .sign-in, #top-nav .right-nav .sign-out {
+  float: left;
+  margin: 0px 5px;
+}
+/* line 77, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav .right-nav .sign-up {
+  float: left;
+  margin: 0px 5px;
+}
+
+/* line 84, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content {
+  padding: 20px;
+  background-color: #efefef;
+  min-height: 400px;
+}
+/* line 89, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content a {
+  color: #4078C0;
+  text-decoration: none;
+}
+/* line 94, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box {
+  margin: 25px auto;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  width: 400px;
+}
+/* line 100, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-header {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  font-family: clavo, sans-serif;
+  font-size: 16pt;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+/* line 110, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 14pt;
+}
+/* line 116, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body em {
+  font-size: 10pt;
+}
+/* line 118, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body #error_explanation {
+  background-color: #FCDEDE;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  border: 1px solid #D2B2B2;
+  border-radius: 3px;
+}
+/* line 125, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body #error_explanation h2 {
+  display: none;
+}
+/* line 126, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body #error_explanation ul {
+  margin: 0px;
+}
+/* line 129, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body .field {
+  margin-bottom: 10px;
+}
+/* line 131, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body .field input {
+  margin: 5px 0px;
+  width: 340px;
+  padding: 5px;
+  font-size: 16pt;
+}
+
+/* line 141, /Users/summermin/projects/monocle/app/assets/stylesheets/layout.scss */
+#footer-nav {
+  padding: 20px;
+  background-color: #222;
+  min-height: 150px;
+  text-align: center;
+  color: #ddd;
+}
+/* line 2, /Users/summermin/projects/monocle/app/assets/stylesheets/users.scss */
+#body-content .middle-box .box-body .forgot-password-link {
+  font-size: 11pt;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
