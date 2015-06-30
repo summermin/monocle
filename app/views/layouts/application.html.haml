@@ -11,8 +11,8 @@
   %body
     #top-nav
       .left-nav
-        .logo
-          = link_to image_tag("monocle-logo-white.png"), root_path
+        = link_to(root_path) do
+          .logo
       .right-nav
         = render partial: 'layouts/right_nav'
       .clearfix

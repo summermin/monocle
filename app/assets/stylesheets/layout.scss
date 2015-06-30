@@ -4,6 +4,7 @@ $body-font-face: proxima-nova, sans-serif;
 body {
   margin: 0px;
   font-family: $body-font-face;
+  min-width: 540px;
 }
 
 h1, h2, h3 {
@@ -65,6 +66,13 @@ a {
   background-color: #333;
 
   .left-nav { float: left; }
+
+  .logo {
+    background-image: image-url('monocle-logo-2x.png');
+    background-size: 243px 38px;
+    width: 243px;
+    height: 38px;
+  }
 
   .right-nav {
     float: right;
