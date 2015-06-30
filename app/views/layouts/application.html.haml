@@ -11,8 +11,7 @@
   %body
     #top-nav
       .left-nav
-        = link_to(root_path) do
-          .logo
+        = render partial: 'layouts/left_nav'
       .right-nav
         = render partial: 'layouts/right_nav'
       .clearfix
