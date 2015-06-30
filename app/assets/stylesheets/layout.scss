@@ -4,7 +4,7 @@ $body-font-face: proxima-nova, sans-serif;
 body {
   margin: 0px;
   font-family: $body-font-face;
-  min-width: 540px;
+  min-width: 700px;
 }
 
 h1, h2, h3 {
@@ -26,6 +26,23 @@ a {
   cursor: pointer;
   font-size: 12pt;
   border: 1px solid #666;
+
+  &.thin { padding: 5px 15px; }
+
+  &.dark-grey {
+    background-color: #444;
+    @-webkit-keyframes darkGreyPulse {
+      from { background-color: #444; }
+      50% { background-color: #666; }
+      to { background-color: #444; }
+    }
+    &:hover {
+      background-color: #494949;
+      -webkit-animation-name: darkGreyPulse;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+    }
+  }
 
   &.grey {
     background-color: #666;
@@ -65,7 +82,17 @@ a {
   padding: 20px;
   background-color: #333;
 
-  .left-nav { float: left; }
+  .left-nav {
+    float: left;
+    min-width: 450px;
+    .logo {
+      float: left;
+      margin-right: 32px;
+    }
+
+    .user-menu { padding: 8px 0px;}
+    .my-projects { float: left; }
+  }
 
   .logo {
     background-image: image-url('monocle-logo-2x.png');
@@ -105,6 +132,11 @@ a {
     border-radius: 5px;
     width: 400px;
 
+    &.medium {
+      min-width: 650px;
+      width: 90%;
+    }
+
     .box-header {
       padding: 10px 20px;
       background: #333;
@@ -136,12 +168,24 @@ a {
 
       .field { margin-bottom: 10px; }
 
-      .field input {
+      .field input[type="text"] {
         margin: 5px 0px;
         width: 340px;
         padding: 5px;
         font-size: 16pt;
       }
+
+      .field input[type="date"] {
+        margin: 5px 0px;
+        width: 340px;
+        padding: 5px;
+        font-size: 16pt;
+        text-transform: uppercase;
+        padding: 0 5px;
+        font-family: $body-font-face;
+      }
+
+      .field .radio-buttons { margin: 5px 0px 20px 0px; }
     }
   }
 }

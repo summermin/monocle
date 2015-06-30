@@ -1,0 +1,6 @@
+.logo
+  = link_to image_tag("monocle-logo-white.png"), root_path
+
+- if current_user
+  .user-menu
+    = link_to 'My Projects', projects_path, class: 'my-projects btn grey thin'
