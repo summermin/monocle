@@ -1,3 +1,32 @@
 // Place all the styles related to the dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.section.front-page-call-to-action {
+  text-align: center;
+  color: #fff;
+
+  .inner-section {
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 58pt;
+    line-height: 100pt;
+    padding: 150px 0px;
+    font-family: "fira-sans-2",sans-serif;
+    font-style: normal;
+  }
+
+  span.highlighted {
+    border-bottom: 3px dotted #fff;
+    display: inline-block;
+
+    &.goal-text { width: 550px; }
+    &.time-period-text { width: 565px; }
+    &.monetary-amount-text { width: 160px; }
+    &.charity-name-text { width: 900px; }
+  }
+
+  .call-to-action-button {
+    margin-top: 75px;
+  }
+}

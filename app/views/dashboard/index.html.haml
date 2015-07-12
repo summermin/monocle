@@ -1,5 +1,24 @@
-- if current_user
-  %div
-    Welcome, #{current_user.first_name}!
-  %div= link_to 'Check out your projects', projects_path
-  %div= link_to "Create a new project", new_user_project_path(current_user)
+.section.front-page-call-to-action
+  .inner-section
+    I want to
+    %span.highlighted.goal-text
+      .value
+        &nbsp;
+    .clearfix
+    by
+    %span.highlighted.time-period-text
+      .value
+        &nbsp;
+    .clearfix
+    or I will donate
+    %span.highlighted.monetary-amount-text
+      .value
+        &nbsp;
+    to
+    %span.highlighted.charity-name-text
+      .value
+        &nbsp;
+    .clearfix
+    .call-to-action-button
+      .btn.dark-grey.huge
+        Put your money where your mouth is
