@@ -1,0 +1,332 @@
+/* line 5, /Users/phillip2/Projects/monocle/app/assets/stylesheets/dashboard.scss */
+.section.front-page-call-to-action {
+  text-align: center;
+  color: #fff;
+}
+/* line 9, /Users/phillip2/Projects/monocle/app/assets/stylesheets/dashboard.scss */
+.section.front-page-call-to-action .inner-section {
+  width: 1000px;
+  margin: 0 auto;
+  font-size: 58pt;
+  line-height: 100pt;
+  padding: 100px 0px;
+  font-family: "fira-sans-2",sans-serif;
+  font-style: normal;
+}
+/* line 19, /Users/phillip2/Projects/monocle/app/assets/stylesheets/dashboard.scss */
+.section.front-page-call-to-action span.highlighted {
+  border-bottom: 3px dotted #fff;
+  display: inline-block;
+}
+/* line 23, /Users/phillip2/Projects/monocle/app/assets/stylesheets/dashboard.scss */
+.section.front-page-call-to-action span.highlighted.goal-text {
+  width: 550px;
+}
+/* line 24, /Users/phillip2/Projects/monocle/app/assets/stylesheets/dashboard.scss */
+.section.front-page-call-to-action span.highlighted.time-period-text {
+  width: 565px;
+}
+/* line 25, /Users/phillip2/Projects/monocle/app/assets/stylesheets/dashboard.scss */
+.section.front-page-call-to-action span.highlighted.monetary-amount-text {
+  width: 160px;
+}
+/* line 26, /Users/phillip2/Projects/monocle/app/assets/stylesheets/dashboard.scss */
+.section.front-page-call-to-action span.highlighted.charity-name-text {
+  width: 900px;
+}
+/* line 29, /Users/phillip2/Projects/monocle/app/assets/stylesheets/dashboard.scss */
+.section.front-page-call-to-action .call-to-action-button {
+  margin: 75px auto;
+  padding: 0px 40px;
+}
+/* line 4, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+body {
+  margin: 0px 0px 150px;
+  font-family: "franklin-gothic-urw", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  min-width: 700px;
+  height: 100%;
+  background-color: #444;
+}
+
+/* line 14, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+h1, h2, h3 {
+  font-family: "fira-sans-2", sans-serif;
+  margin-top: 0px;
+}
+
+/* line 19, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+.clearfix {
+  clear: both;
+}
+
+/* line 21, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 26, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+.btn {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12pt;
+  border: 1px solid #666;
+  font-family: "franklin-gothic-urw", sans-serif;
+}
+/* line 35, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+.btn.thin {
+  padding: 5px 15px;
+}
+/* line 37, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+.btn.dark-grey {
+  background-color: #444;
+}
+@-webkit-keyframes darkGreyPulse {
+  from {
+    background-color: #444;
+  }
+  50% {
+    background-color: #666;
+  }
+  to {
+    background-color: #444;
+  }
+}
+/* line 44, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+.btn.dark-grey:hover {
+  background-color: #494949;
+  -webkit-animation-name: darkGreyPulse;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+}
+/* line 52, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+.btn.grey {
+  background-color: #666;
+}
+@-webkit-keyframes greyPulse {
+  from {
+    background-color: #666;
+  }
+  50% {
+    background-color: #888;
+  }
+  to {
+    background-color: #666;
+  }
+}
+/* line 59, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+.btn.grey:hover {
+  background-color: #777;
+  -webkit-animation-name: greyPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+/* line 67, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+.btn.green {
+  background-color: #60b044;
+  border: 1px solid #5ca941;
+}
+@-webkit-keyframes greenPulse {
+  from {
+    background-color: #60b044;
+  }
+  50% {
+    background-color: #69C349;
+  }
+  to {
+    background-color: #60b044;
+  }
+}
+/* line 77, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+.btn.green:hover {
+  background-color: #69C349;
+  -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+/* line 85, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+.btn.huge {
+  font-size: 32px;
+  line-height: 48px;
+  padding: 30px 0px;
+  border-width: 1px;
+}
+
+/* line 93, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav {
+  padding: 20px;
+  background-color: #333;
+}
+/* line 97, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav .left-nav {
+  float: left;
+  min-width: 450px;
+}
+/* line 100, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav .left-nav .logo {
+  float: left;
+  margin-right: 32px;
+}
+/* line 105, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav .left-nav .user-menu {
+  padding: 8px 0px;
+}
+/* line 106, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav .left-nav .my-projects {
+  float: left;
+}
+/* line 109, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav .logo {
+  background-image: url(/assets/monocle-logo-2x-bb2ce7eebab673c9f4b4c3256af06de248225c69240f72a6d4520ad7eba2307a.png);
+  background-size: 243px 38px;
+  width: 243px;
+  height: 38px;
+}
+/* line 116, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav .right-nav {
+  float: right;
+}
+/* line 119, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav .right-nav .sign-in, #top-nav .right-nav .sign-out {
+  float: left;
+  margin: 0px 5px;
+}
+/* line 124, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#top-nav .right-nav .sign-up {
+  float: left;
+  margin: 0px 5px;
+}
+
+/* line 131, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content {
+  background: -webkit-linear-gradient(#333, #444);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#333, #444);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#333, #444);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#333, #444);
+  /* Standard syntax */
+  padding: 50px 0px;
+}
+/* line 138, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content a {
+  color: #4078C0;
+  text-decoration: none;
+}
+/* line 143, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box {
+  margin: 25px auto;
+  border: 1px solid #555;
+  border-radius: 5px;
+  width: 400px;
+}
+/* line 149, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box.medium {
+  min-width: 650px;
+  width: 90%;
+}
+/* line 154, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-header {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  font-family: "fira-sans-2", sans-serif;
+  font-size: 16pt;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+/* line 164, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body {
+  padding: 20px;
+  background-color: #fff;
+  font-size: 14pt;
+}
+/* line 169, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body em {
+  font-size: 10pt;
+}
+/* line 171, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body #error_explanation {
+  background-color: #FCDEDE;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  border: 1px solid #D2B2B2;
+  border-radius: 3px;
+}
+/* line 178, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body #error_explanation h2 {
+  display: none;
+}
+/* line 179, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body #error_explanation ul {
+  margin: 0px;
+}
+/* line 182, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body .field {
+  margin-bottom: 10px;
+}
+/* line 184, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body .field input[type="text"],
+#body-content .middle-box .box-body input[type="email"],
+#body-content .middle-box .box-body input[type="password"] {
+  margin: 5px 0px;
+  width: 340px;
+  padding: 5px;
+  font-size: 16pt;
+}
+/* line 193, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body .field input[type="date"] {
+  margin: 5px 0px;
+  width: 340px;
+  padding: 5px;
+  font-size: 16pt;
+  text-transform: uppercase;
+  padding: 0 5px;
+  font-family: "franklin-gothic-urw", sans-serif;
+}
+/* line 203, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#body-content .middle-box .box-body .field .radio-buttons {
+  margin: 5px 0px 20px 0px;
+}
+
+/* line 208, /Users/phillip2/Projects/monocle/app/assets/stylesheets/layout.scss */
+#footer-nav {
+  padding: 20px 0px;
+  background-color: #444;
+  text-align: center;
+  color: #ddd;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 150px;
+  width: 100%;
+}
+/* line 1, /Users/phillip2/Projects/monocle/app/assets/stylesheets/projects.scss */
+.form-area {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* line 2, /Users/phillip2/Projects/monocle/app/assets/stylesheets/users.scss */
+#body-content .middle-box .box-body .forgot-password-link {
+  font-size: 11pt;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
