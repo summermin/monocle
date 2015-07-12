@@ -168,7 +168,9 @@ a {
 
       .field { margin-bottom: 10px; }
 
-      .field input[type="text"] {
+      .field input[type="text"],
+        input[type="email"],
+        input[type="password"] {
         margin: 5px 0px;
         width: 340px;
         padding: 5px;
