@@ -2,32 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.section.front-page-call-to-action {
+.section {
   text-align: center;
   color: #fff;
 
   .inner-section {
     width: 1000px;
     margin: 0 auto;
+  }
+
+  &.front-page-call-to-action {
     font-size: 58pt;
     line-height: 100pt;
     padding: 100px 0px;
     font-family: "fira-sans-2",sans-serif;
-    font-style: normal;
-  }
 
-  span.highlighted {
-    border-bottom: 3px dotted #fff;
-    display: inline-block;
+    .call-to-action-button {
+      margin: 75px auto;
+      padding: 0px 40px;
+    }
 
-    &.goal-text { width: 550px; }
-    &.time-period-text { width: 565px; }
-    &.monetary-amount-text { width: 160px; }
-    &.charity-name-text { width: 900px; }
-  }
+    span.highlighted {
+      border-bottom: 3px dotted #fff;
+      display: inline-block;
 
-  .call-to-action-button {
-    margin: 75px auto;
-    padding: 0px 40px;
+      &.goal-text { width: 550px; }
+      &.time-period-text { width: 565px; }
+      &.monetary-amount-text { width: 160px; }
+      &.charity-name-text { width: 900px; }
+    }
   }
 }

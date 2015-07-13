@@ -1,4 +1,73 @@
-.form-area {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.section.new-project-copy {
+  .inner-section {
+    font-size: 64px;
+    color: #FFD700;
+    padding-bottom: 40px;
+  }
+}
+
+.section.new-project {
+  .inner-section {
+    .steps-header {
+      width: 1000px;
+      margin: 0 auto;
+      border: 1px solid transparent;
+      width: 1050px;
+      margin-left: -25px;
+      background-color: #222;
+
+      .step {
+        float: left;
+        padding: 33px;
+        font-size: 24pt;
+        margin-right: 15px;
+
+        .step-text {
+          float: left;
+        }
+      }
+
+      .numberCircle {
+        border-radius: 50%;
+        behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+        width: 24px;
+        height: 24px;
+        padding: 8px;
+
+        color: #999;
+        border: 1px solid #999;
+        text-align: center;
+        margin-top: 3px;
+
+        font: 24px;
+
+        &.left {
+          float: left;
+          margin-right: 15px;
+        }
+
+        .number { margin-top: -11px;}
+      }
+
+      transition: all 0.1s ease;
+
+      &.sticky {
+        position: fixed;
+        top: 0;
+
+        .step {
+          &.active .step-text {
+            border-bottom: 3px dotted #FFD700;
+          }
+        }
+      }
+    }
+
+    .step-form {
+      background: #444;
+      padding: 30px;
+      height: 2000px;
+    }
+  }
 }

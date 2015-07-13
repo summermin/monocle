@@ -1,8 +1,6 @@
 class ProjectsController < ApplicationController
-  before_action :load_current_user, only: [:index, :new]
-
   def index
-    @projects = @user.projects
+    @projects = current_user.projects
   end
 
   def new
@@ -25,11 +23,9 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :description, :start_date, :end_date, :user_id, :project_type, :has_check_ins)
-  end
-
-  def load_current_user
-    @user = current_user
+    params.require(:project).permit(:name, :description, :start_date, :end_date, :project_type, :has_check_ins).merge(
+      user_id: current_user.try!(:id)
+    )
   end
 
 end
