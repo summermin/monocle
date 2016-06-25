@@ -15,6 +15,8 @@ gem 'haml'
 
 gem 'devise'
 
+gem 'sendgrid-rails'
+
 group :development, :test do
   gem 'byebug'
   gem 'pry'
