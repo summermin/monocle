@@ -1,4 +1,4 @@
-task :send_checkin_notifications do
+task send_checkin_notifications: :environment do
   day_of_week = Date.today.strftime("%A")
 
   projects = Project.
