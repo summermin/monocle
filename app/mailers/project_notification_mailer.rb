@@ -1,5 +1,5 @@
 class ProjectNotificationMailer < ActionMailer::Base
-  default from: 'no-reply@monocleproject.com'
+  default from: 'no-reply@monocleprojects.com'
 
   def checkin_email(to_address:)
     category 'checkin_notification'
