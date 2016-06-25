@@ -13,8 +13,8 @@ class SMSNotification < ActiveRecord::Base
 
   def client
     @client ||= Twilio::REST::Client.new(
-      account_sid: ENV["TWILIO_ACCOUNT_SID"],
-      auth_token: ENV["TWILIO_AUTH_TOKEN"]
+      ENV["TWILIO_ACCOUNT_SID"],
+      ENV["TWILIO_AUTH_TOKEN"]
     )
   end
 end
