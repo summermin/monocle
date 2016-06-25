@@ -18,6 +18,8 @@ gem 'devise'
 gem 'sendgrid-rails'
 gem "letter_opener", group: :development
 
+gem "twilio-ruby"
+
 gem 'sidekiq'
 
 group :development, :test do
