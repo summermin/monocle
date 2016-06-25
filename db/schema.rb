@@ -11,12 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150630195720) do
+ActiveRecord::Schema.define(version: 20160625205953) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "check_ins", force: :cascade do |t|
+  create_table "causes", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "causes", ["name"], name: "index_causes_on_name", unique: true, using: :btree
+
+  create_table "checkin_days", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "checkin_days", ["name"], name: "index_checkin_days_on_name", unique: true, using: :btree
+
+  create_table "checkins", force: :cascade do |t|
     t.date     "check_in_date"
     t.string   "status"
     t.integer  "project_id"
@@ -24,20 +41,35 @@ ActiveRecord::Schema.define(version: 20150630195720) do
     t.datetime "updated_at",    null: false
   end
 
-  add_index "check_ins", ["project_id"], name: "index_check_ins_on_project_id", using: :btree
+  add_index "checkins", ["project_id"], name: "index_checkins_on_project_id", using: :btree
+
+  create_table "project_causes", force: :cascade do |t|
+    t.integer  "project_id"
+    t.integer  "cause_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "project_causes", ["project_id", "cause_id"], name: "index_project_causes_on_project_id_and_cause_id", unique: true, using: :btree
+
+  create_table "project_checkin_days", force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "checkin_day_id"
+  end
+
+  add_index "project_checkin_days", ["project_id", "checkin_day_id"], name: "index_project_checkin_days_on_project_id_and_checkin_day_id", unique: true, using: :btree
 
   create_table "projects", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
     t.date     "start_date"
     t.date     "end_date"
     t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "project_type"
-    t.boolean  "has_check_ins"
+    t.integer  "checkin_hour"
   end
 
+  add_index "projects", ["checkin_hour"], name: "index_projects_on_checkin_hour", using: :btree
   add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
@@ -60,6 +92,6 @@ ActiveRecord::Schema.define(version: 20150630195720) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "check_ins", "projects"
+  add_foreign_key "checkins", "projects"
   add_foreign_key "projects", "users"
 end

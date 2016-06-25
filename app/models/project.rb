@@ -1,5 +1,11 @@
 class Project < ActiveRecord::Base
   belongs_to :user
-  has_many :check_ins
-  accepts_nested_attributes_for :check_ins
+
+  has_many :project_causes
+  has_many :causes, through: :project_causes
+
+  has_many :checkins
+
+  has_many :project_checkin_days, class_name: "::ProjectCheckinDay"
+  has_many :checkin_days, through: :project_checkin_days, class_name: "::CheckinDay"
 end
