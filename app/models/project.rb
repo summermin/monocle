@@ -8,4 +8,8 @@ class Project < ActiveRecord::Base
 
   has_many :project_checkin_days, class_name: "::ProjectCheckinDay"
   has_many :checkin_days, through: :project_checkin_days, class_name: "::CheckinDay"
+
+  def send_notification
+    puts "Implement me"
+  end
 end
