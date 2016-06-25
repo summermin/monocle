@@ -16,6 +16,7 @@ gem 'haml'
 gem 'devise'
 
 gem 'sendgrid-rails'
+gem "letter_opener", group: :development
 
 group :development, :test do
   gem 'byebug'

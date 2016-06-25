@@ -11,5 +11,4 @@ if ENV['SENDGRID_USERNAME'] && ENV['SENDGRID_PASSWORD']
     :enable_starttls_auto => true,
     :ssl => true
   }
-  ActionMailer::Base.delivery_method = :smtp
 end
