@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160625205953) do
+ActiveRecord::Schema.define(version: 20160625212745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(version: 20160625205953) do
 
   add_index "checkins", ["project_id"], name: "index_checkins_on_project_id", using: :btree
 
+  create_table "email_notifications", force: :cascade do |t|
+    t.integer  "project_id"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "email_notifications", ["project_id"], name: "index_email_notifications_on_project_id", using: :btree
+
   create_table "project_causes", force: :cascade do |t|
     t.integer  "project_id"
     t.integer  "cause_id"
@@ -71,6 +80,15 @@ ActiveRecord::Schema.define(version: 20160625205953) do
 
   add_index "projects", ["checkin_hour"], name: "index_projects_on_checkin_hour", using: :btree
   add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
+
+  create_table "sms_notifications", force: :cascade do |t|
+    t.integer  "project_id"
+    t.string   "phone_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sms_notifications", ["project_id"], name: "index_sms_notifications_on_project_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
