@@ -1,5 +1,5 @@
 class SMSNotificationMethod < ActiveRecord::Base
-  TWILIO_NUMBER = "+18329004235"
+  TWILIO_NUMBER = "+16465128208"
 
   validates :phone_number, :project_id, presence: true
 
