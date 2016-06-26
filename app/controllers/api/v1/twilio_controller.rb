@@ -1,8 +1,8 @@
-class Api::V1::TwilioController < ApplicationController
+class Api::V1::TwilioController < Api::V1::BaseController
   def sms_response
     message_body = params["Body"]
     from_number = params["From"]
-    boot_twilio
+
     sms = SMSNotification.client.messages.create(
       from: SMSNotification::TWILIO_NUMBER,
       to: from_number,
