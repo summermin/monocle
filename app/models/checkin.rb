@@ -5,13 +5,13 @@ class Checkin < ActiveRecord::Base
 
   scope :notified, -> { where(status: "notified") }
   scope :completed, -> { where(status: "completed") }
-  scope :failed, -> { where(status: "notified") }
+  scope :failed, -> { where(status: "failed") }
 
   def fail!
     update_attributes!(status: "failed")
   end
 
   def complete!
-    update_attributes!(status: "failed")
+    update_attributes!(status: "completed")
   end
 end
