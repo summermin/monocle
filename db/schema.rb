@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160625212745) do
+ActiveRecord::Schema.define(version: 20160626025024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,14 +34,17 @@ ActiveRecord::Schema.define(version: 20160625212745) do
   add_index "checkin_days", ["name"], name: "index_checkin_days_on_name", unique: true, using: :btree
 
   create_table "checkins", force: :cascade do |t|
-    t.date     "check_in_date"
     t.string   "status"
     t.integer  "project_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.datetime "notified_at"
+    t.datetime "responded_at"
   end
 
   add_index "checkins", ["project_id"], name: "index_checkins_on_project_id", using: :btree
+  add_index "checkins", ["responded_at"], name: "index_checkins_on_responded_at", using: :btree
+  add_index "checkins", ["status"], name: "index_checkins_on_status", using: :btree
 
   create_table "email_notifications", force: :cascade do |t|
     t.integer  "project_id"
@@ -51,6 +54,17 @@ ActiveRecord::Schema.define(version: 20160625212745) do
   end
 
   add_index "email_notifications", ["project_id"], name: "index_email_notifications_on_project_id", using: :btree
+
+  create_table "notification_checkins", force: :cascade do |t|
+    t.integer  "notification_id"
+    t.integer  "checkin_id"
+    t.string   "identifier"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "notification_checkins", ["checkin_id"], name: "index_notification_checkins_on_checkin_id", using: :btree
+  add_index "notification_checkins", ["notification_id"], name: "index_notification_checkins_on_notification_id", using: :btree
 
   create_table "project_causes", force: :cascade do |t|
     t.integer  "project_id"

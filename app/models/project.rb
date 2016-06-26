@@ -16,9 +16,13 @@ class Project < ActiveRecord::Base
 
   scope :active, -> { where("start_date <= ? AND end_date >= ?", Date.today, Date.today) }
 
-  def send_notifications
-    email_notifications.each(&:notify)
-    sms_notifications.each(&:notify)
+  def send_notifications(checkin)
+    (email_notifications + sms_notifications).each {|notification| notification.notify(checkin) }
+  end
+
+  def create_checkin
+    checkins.where(status: "notified", responded_at: nil).map(&:fail!)
+    checkins.create!(status: "notified", notified_at: Time.now)
   end
 
   def self.for_day_and_hour(day_of_week, hour)
