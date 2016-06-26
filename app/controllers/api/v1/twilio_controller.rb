@@ -1,6 +1,6 @@
 class Api::V1::TwilioController < Api::V1::BaseController
   def sms_response
-    message_body = params["Body"]
+    message_body = params["Body"].gsub(/\s+/, "").downcase
     from_number = params["From"]
 
     # Lookup notification by phone number, filtering out inactive projects
@@ -11,10 +11,10 @@ class Api::V1::TwilioController < Api::V1::BaseController
 
     if !checkin.present?
       response_text = "I was unable to find an active project for this phone number. Please contact support if you think this is an error."
-    elsif message_body.downcase == "yes"
+    elsif message_body == "yes"
       checkin.complete!
       response_text = "Woot! Good job, we will not charge your card this round."
-    elsif message_body.downcase == "no"
+    elsif message_body == "no"
       checkin.fail!
       response_text = "Bummer. Well, at least it's going to a good cause. Your card will be charged #{} within the next few days"
     else
