@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160626025024) do
+ActiveRecord::Schema.define(version: 20160626204635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,14 +46,14 @@ ActiveRecord::Schema.define(version: 20160626025024) do
   add_index "checkins", ["responded_at"], name: "index_checkins_on_responded_at", using: :btree
   add_index "checkins", ["status"], name: "index_checkins_on_status", using: :btree
 
-  create_table "email_notifications", force: :cascade do |t|
+  create_table "email_notification_methods", force: :cascade do |t|
     t.integer  "project_id"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "email_notifications", ["project_id"], name: "index_email_notifications_on_project_id", using: :btree
+  add_index "email_notification_methods", ["project_id"], name: "index_email_notification_methods_on_project_id", using: :btree
 
   create_table "notification_checkins", force: :cascade do |t|
     t.integer  "notification_id"
@@ -95,14 +95,14 @@ ActiveRecord::Schema.define(version: 20160626025024) do
   add_index "projects", ["checkin_hour"], name: "index_projects_on_checkin_hour", using: :btree
   add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
 
-  create_table "sms_notifications", force: :cascade do |t|
+  create_table "sms_notification_methods", force: :cascade do |t|
     t.integer  "project_id"
     t.string   "phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "sms_notifications", ["project_id"], name: "index_sms_notifications_on_project_id", using: :btree
+  add_index "sms_notification_methods", ["project_id"], name: "index_sms_notification_methods_on_project_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

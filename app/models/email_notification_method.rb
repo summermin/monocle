@@ -1,4 +1,4 @@
-class EmailNotification < ActiveRecord::Base
+class EmailNotificationMethod < ActiveRecord::Base
   validates :email, :project_id, presence: true
 
   belongs_to :project

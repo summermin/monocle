@@ -7,17 +7,22 @@ class Project < ActiveRecord::Base
   has_many :causes, through: :project_causes
 
   has_many :checkins
+  has_many :notification_checkins, through: :checkins
 
-  has_many :email_notifications
-  has_many :sms_notifications
+  has_many :email_notification_methods
+  has_many :sms_notification_methods
 
   has_many :project_checkin_days, class_name: "::ProjectCheckinDay"
   has_many :checkin_days, through: :project_checkin_days, class_name: "::CheckinDay"
 
   scope :active, -> { where("start_date <= ? AND end_date >= ?", Date.today, Date.today) }
 
+  def notification_methods
+    (email_notification_methods + sms_notification_methods)
+  end
+
   def send_notifications(checkin)
-    (email_notifications + sms_notifications).each {|notification| notification.notify(checkin) }
+    notification_methods.each {|notification| notification.notify(checkin) }
   end
 
   def create_checkin

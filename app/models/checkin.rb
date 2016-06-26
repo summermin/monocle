@@ -1,6 +1,7 @@
 class Checkin < ActiveRecord::Base
   validates :status, presence: true
 
+  has_many :notification_checkins
   belongs_to :project
 
   scope :notified, -> { where(status: "notified") }

@@ -4,7 +4,7 @@ class Api::V1::TwilioController < Api::V1::BaseController
     from_number = params["From"]
 
     # Lookup notification by phone number, filtering out inactive projects
-    notification = SMSNotification.joins(:project).where(phone_number: from_number).merge(Project.active).first
+    notification = SMSNotificationMethod.joins(:project).where(phone_number: from_number).merge(Project.active).first
 
     # Lookup notified checkins
     checkin = notification.checkins.notified.first
@@ -21,8 +21,8 @@ class Api::V1::TwilioController < Api::V1::BaseController
       response_text = "I'm not sure what you mean, please let me know if you achieved your goal today. (Yes/No)"
     end
 
-    sms = SMSNotification.client.messages.create(
-      from: SMSNotification::TWILIO_NUMBER,
+    sms = SMSNotificationMethod.client.messages.create(
+      from: SMSNotificationMethod::TWILIO_NUMBER,
       to: from_number,
       body: response_text
     )
