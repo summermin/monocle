@@ -14,8 +14,15 @@ class Project < ActiveRecord::Base
   has_many :project_checkin_days, class_name: "::ProjectCheckinDay"
   has_many :checkin_days, through: :project_checkin_days, class_name: "::CheckinDay"
 
+  scope :active, -> { where("start_date <= ? AND end_date >= ?", Date.today, Date.today) }
+
   def send_notifications
     email_notifications.each(&:notify)
     sms_notifications.each(&:notify)
+  end
+
+  def self.for_day_and_hour(day_of_week, hour)
+    joins(project_checkin_days: :checkin_day).
+      where(checkin_days: { name: day_of_week }, checkin_hour: hour)
   end
 end
