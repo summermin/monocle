@@ -13,7 +13,7 @@ class Api::V1::TwilioController < Api::V1::BaseController
       response_text = "I was unable to find an active project for this phone number. Please contact support if you think this is an error."
     elsif message_body == "yes"
       checkin.complete!
-      response_text = "Woot! Good job, we will not charge your card this round."
+      response_text = "Woot! Good job, we will not charge your card this round. Keep up the great work \u1F601".encode("utf-8")
     elsif message_body == "no"
       checkin.fail!
       response_text = "Bummer. Well, at least it's going to a good cause. Your card will be charged #{} within the next few days"
