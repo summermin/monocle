@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
   validates :user_id, :project_type, presence: true
+  validates :checkin_wager_amount, numericality: { greater_than: 1.0 }, presence: true
 
   belongs_to :user
 

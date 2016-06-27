@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160626204635) do
+ActiveRecord::Schema.define(version: 20160627000138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20160626204635) do
     t.integer  "cause_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "checkin_wager_amount", precision: 3, scale: 2
   end
 
   add_index "project_causes", ["project_id", "cause_id"], name: "index_project_causes_on_project_id_and_cause_id", unique: true, using: :btree
@@ -86,10 +87,11 @@ ActiveRecord::Schema.define(version: 20160626204635) do
     t.date     "start_date"
     t.date     "end_date"
     t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.string   "project_type"
     t.integer  "checkin_hour"
+    t.decimal  "payment_amount", precision: 8, scale: 2
   end
 
   add_index "projects", ["checkin_hour"], name: "index_projects_on_checkin_hour", using: :btree
